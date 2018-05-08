@@ -1,12 +1,12 @@
 // @flow
-import React from "react"
+import React from "react";
 import {
   IconSpanStyle,
   ContentStyle,
   TextSpanStyle,
   NumberSpanStyle,
   PaperStyle
-} from "./InfoBoxStyles"
+} from "./InfoBoxStyles";
 
 type Props = {
   /** The title of the info box (i.e. Strains) */
@@ -19,7 +19,7 @@ type Props = {
   iconBackgroundColor?: string | Object,
   /** The background color of the text area in the info box. Can be passed as string or Material-UI object (i.e. deepPurple[300]) */
   textBackgroundColor?: string | Object
-}
+};
 
 const styles = {
   icon: {
@@ -29,10 +29,16 @@ const styles = {
     maxWidth: "100%",
     color: "white"
   }
-}
+};
 
 const InfoBox = (props: Props) => {
-  const { title, value, Icon, iconBackgroundColor, textBackgroundColor } = props
+  const {
+    title,
+    value,
+    Icon,
+    iconBackgroundColor,
+    textBackgroundColor
+  } = props;
 
   return (
     <PaperStyle>
@@ -45,7 +51,7 @@ const InfoBox = (props: Props) => {
         <NumberSpanStyle>{value}</NumberSpanStyle>
       </ContentStyle>
     </PaperStyle>
-  )
-}
+  );
+};
 
-export default InfoBox
+export default InfoBox;

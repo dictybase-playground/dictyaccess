@@ -1,19 +1,19 @@
 // @flow
-import React from "react"
-import { withStyles } from "material-ui/styles"
-import Drawer from "material-ui/Drawer"
-import { ListItem, ListItemIcon } from "material-ui/List"
-import Typography from "material-ui/Typography"
-import TrendingUpIcon from "@material-ui/icons/TrendingUp"
-import FingerprintIcon from "@material-ui/icons/Fingerprint"
-import WorkIcon from "@material-ui/icons/Work"
-import DataUsageIcon from "@material-ui/icons/DataUsage"
+import React from "react";
+import { withStyles } from "material-ui/styles";
+import Drawer from "material-ui/Drawer";
+import { ListItem, ListItemIcon } from "material-ui/List";
+import Typography from "material-ui/Typography";
+import TrendingUpIcon from "@material-ui/icons/TrendingUp";
+import FingerprintIcon from "@material-ui/icons/Fingerprint";
+import WorkIcon from "@material-ui/icons/Work";
+import DataUsageIcon from "@material-ui/icons/DataUsage";
 import {
   StyledLink,
   ListStyle,
   // DrawerPaperStyle,
   DrawerHeaderStyle
-} from "app/layout/SidebarStyles"
+} from "app/layout/SidebarStyles";
 
 const styles = theme => ({
   drawerPaper: {
@@ -21,19 +21,19 @@ const styles = theme => ({
     width: "240px",
     height: "100%"
   }
-})
+});
 
 type Props = {
   /** Material-UI property for customizing CSS */
   classes: Object
-}
+};
 
 /**
  * This is the Sidebar component. Right now it is a Material-UI Drawer component that is permanently attached to the left side of the page, but responsiveness will be added soon.
  */
 
 const Sidebar = (props: Props) => {
-  const { classes } = props
+  const { classes } = props;
 
   return (
     <Drawer
@@ -41,7 +41,8 @@ const Sidebar = (props: Props) => {
       open
       classes={{
         paper: classes.drawerPaper
-      }}>
+      }}
+    >
       <DrawerHeaderStyle>
         <Typography variant="title" color="inherit">
           DictyAccess
@@ -56,9 +57,10 @@ const Sidebar = (props: Props) => {
             to="/dashboard/genomes"
             activeStyle={{
               fontWeight: "bold",
-              fontFamily: "Roboto",
+              fontFamily: "Raleway",
               color: "rgb(251, 140, 0)"
-            }}>
+            }}
+          >
             Genomes
           </StyledLink>
         </ListItem>
@@ -70,9 +72,10 @@ const Sidebar = (props: Props) => {
             to="/dashboard/curation"
             activeStyle={{
               fontWeight: "bold",
-              fontFamily: "Roboto",
+              fontFamily: "Raleway",
               color: "rgb(183, 28, 28)"
-            }}>
+            }}
+          >
             Curation
           </StyledLink>
         </ListItem>
@@ -84,9 +87,10 @@ const Sidebar = (props: Props) => {
             to="/dashboard/analytics"
             activeStyle={{
               fontWeight: "bold",
-              fontFamily: "Roboto",
+              fontFamily: "Raleway",
               color: "rgb(30, 136, 229)"
-            }}>
+            }}
+          >
             Analytics
           </StyledLink>
         </ListItem>
@@ -98,15 +102,16 @@ const Sidebar = (props: Props) => {
             to="/dashboard/dicty-stock-center"
             activeStyle={{
               fontWeight: "bold",
-              fontFamily: "Roboto",
+              fontFamily: "Raleway",
               color: "#4f5aae"
-            }}>
+            }}
+          >
             Dicty Stock Center
           </StyledLink>
         </ListItem>
       </ListStyle>
     </Drawer>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(Sidebar)
+export default withStyles(styles)(Sidebar);

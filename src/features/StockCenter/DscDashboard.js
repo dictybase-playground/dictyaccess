@@ -30,7 +30,7 @@ const DscDashboard = () => {
           value="1927"
         />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid item xs={6} sm={6} lg={3}>
         <InfoBox
           Icon={Public}
           iconBackgroundColor={deepPurple[900]}
@@ -39,7 +39,7 @@ const DscDashboard = () => {
           value="882"
         />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid item xs={6} sm={6} lg={3}>
         <InfoBox
           Icon={Whatshot}
           iconBackgroundColor={deepPurple[900]}
@@ -48,7 +48,7 @@ const DscDashboard = () => {
           value="12"
         />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid item xs={6} sm={6} lg={3}>
         <InfoBox
           Icon={LibraryBooks}
           iconBackgroundColor={deepPurple[900]}
@@ -60,19 +60,19 @@ const DscDashboard = () => {
       <Grid item xs={12} sm={12} md={12} lg={12}>
         <Orders data={data.charts.orders} color={deepPurple[300]} />
       </Grid>
-      <Grid item xs={12} sm={12} md={6} lg={6}>
+      <Grid item xs={12} sm={12} md={4} lg={4}>
         <StrainsList data={data.tables.latestGenes} color={deepPurple[700]} />
       </Grid>
-      <Grid item xs={12} sm={12} md={6} lg={6}>
+      <Grid item xs={10} sm={12} md={4} lg={4}>
         <PlasmidsList
           data={data.tables.mostUsedGenes}
           color={deepPurple[500]}
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={3} lg={3}>
+      <Grid item xs={10} sm={6} md={2} lg={2}>
         <LatestStrains data={data.tables.latestGenes} color={deepPurple[400]} />
       </Grid>
-      <Grid item xs={12} sm={6} md={3} lg={3}>
+      <Grid item xs={10} sm={6} md={2} lg={2}>
         <LatestPlasmids
           data={data.tables.latestGenes}
           color={deepPurple[600]}

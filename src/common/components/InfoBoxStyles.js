@@ -1,15 +1,15 @@
 // @flow
-import styled from "styled-components"
-import Icon from "material-ui/Icon"
-import Paper from "material-ui/Paper"
+import styled from "styled-components";
+import Icon from "material-ui/Icon";
+import Paper from "material-ui/Paper";
 
 // create unique variables to prevent console warnings from React
-const getIconBackgroundColor = props => props.bgColor || "#311b92"
-const getTextBackgroundColor = props => props.bgColor || "#fff"
+const getIconBackgroundColor = props => props.bgColor || "#311b92";
+const getTextBackgroundColor = props => props.bgColor || "#fff";
 
 export const PaperStyle = styled(Paper)`
   border-radius: 4px;
-`
+`;
 
 export const IconSpanStyle = styled.span`
   float: left;
@@ -18,7 +18,7 @@ export const IconSpanStyle = styled.span`
   text-align: center;
   border-radius: 4px;
   background-color: ${getIconBackgroundColor};
-`
+`;
 
 export const ContentStyle = styled.div`
   padding: 5px 10px;
@@ -26,17 +26,19 @@ export const ContentStyle = styled.div`
   height: 80px;
   border-radius: 4px;
   background-color: ${getTextBackgroundColor};
-`
+`;
 
 export const TextSpanStyle = styled.span`
   font-size: 20px;
+  font-family: "Raleway", sans-serif;
   color: #757575;
-`
+`;
 
 export const NumberSpanStyle = styled.span`
   display: block;
   font-size: 2em;
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
   line-height: 1.8em;
   color: #424242;
-`
+`;
