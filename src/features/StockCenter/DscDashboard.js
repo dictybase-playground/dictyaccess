@@ -1,18 +1,18 @@
 // @flow
-import React from "react"
-import Grid from "material-ui/Grid"
-import InfoBox from "common/components/InfoBox"
-import Orders from "features/StockCenter/Charts/Orders"
-import StrainsList from "features/StockCenter/Tables/StrainsList"
-import PlasmidsList from "features/StockCenter/Tables/PlasmidsList"
-import LatestStrains from "features/StockCenter/Lists/LatestStrains"
-import LatestPlasmids from "features/StockCenter/Lists/LatestPlasmids"
-import Poll from "@material-ui/icons/Poll"
-import Public from "@material-ui/icons/Public"
-import Whatshot from "@material-ui/icons/Whatshot"
-import LibraryBooks from "@material-ui/icons/LibraryBooks"
-import deepPurple from "material-ui/colors/deepPurple"
-import data from "common/data/data"
+import React from "react";
+import Grid from "material-ui/Grid";
+import InfoBox from "common/components/InfoBox";
+import Orders from "./Charts/Orders";
+import StrainsList from "./Tables/StrainsList";
+import PlasmidsList from "./Tables/PlasmidsList";
+import LatestStrains from "./Lists/LatestStrains";
+import LatestPlasmids from "./Lists/LatestPlasmids";
+import Poll from "@material-ui/icons/Poll";
+import Public from "@material-ui/icons/Public";
+import Whatshot from "@material-ui/icons/Whatshot";
+import LibraryBooks from "@material-ui/icons/LibraryBooks";
+import deepPurple from "material-ui/colors/deepPurple";
+import data from "common/data/data";
 
 /**
  * This is the layout component for the Stock Center dashboard. It uses Material-UI's grid system for width and responsiveness.
@@ -57,6 +57,9 @@ const DscDashboard = () => {
           value="1"
         />
       </Grid>
+      <Grid item xs={12} sm={12} md={12} lg={12}>
+        <Orders data={data.charts.orders} color={deepPurple[300]} />
+      </Grid>
       <Grid item xs={12} sm={12} md={6} lg={6}>
         <StrainsList data={data.tables.latestGenes} color={deepPurple[700]} />
       </Grid>
@@ -75,11 +78,8 @@ const DscDashboard = () => {
           color={deepPurple[600]}
         />
       </Grid>
-      <Grid item xs={12} sm={6} md={6} lg={6}>
-        <Orders data={data.charts.orders} color={deepPurple[300]} />
-      </Grid>
     </Grid>
-  )
-}
+  );
+};
 
-export default DscDashboard
+export default DscDashboard;

@@ -1,15 +1,15 @@
 // @flow
-import React from "react"
-import List, { ListItem, ListItemText } from "material-ui/List"
-import Paper from "material-ui/Paper"
-import { HeaderStyle } from "common/styles/ListStyles"
+import React from "react";
+import List, { ListItem, ListItemText } from "material-ui/List";
+import Paper from "material-ui/Paper";
+import { HeaderStyle } from "common/styles/ListStyles";
 
 type Props = {
   /** The data to pass into this table */
   data: Array<Object>,
   /** The Material-UI color palette selected */
   color: Object
-}
+};
 
 /**
  * This is a list of the latest strains.
@@ -29,7 +29,7 @@ const LatestStrains = (props: Props) => {
         ))}
       </List>
     </Paper>
-  )
-}
+  );
+};
 
-export default LatestStrains
+export default LatestStrains;

@@ -1,5 +1,5 @@
 // @flow
-import React from "react"
+import React from "react";
 import {
   LineChart,
   Line,
@@ -8,20 +8,21 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend
-} from "recharts"
+  Legend,
+  AreaChart
+} from "recharts";
 import {
   PaperStyle,
   HeaderStyle,
   ChartWrapper
-} from "common/styles/ChartStyles"
+} from "common/styles/ChartStyles";
 
 type Props = {
   /** Data array for chart */
   data: Array<Object>,
   /** The Material-UI color palette selected */
   color: Object
-}
+};
 
 /**
  * This is a chart that shows the number of Stock Center orders by month.
@@ -46,7 +47,7 @@ const Orders = (props: Props) => {
         </ResponsiveContainer>
       </ChartWrapper>
     </PaperStyle>
-  )
-}
+  );
+};
 
-export default Orders
+export default Orders;
