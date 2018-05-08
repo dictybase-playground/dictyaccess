@@ -49,66 +49,68 @@ const Sidebar = (props: Props) => {
         </Typography>
       </DrawerHeaderStyle>
       <ListStyle>
-        <ListItem button>
-          <ListItemIcon>
-            <FingerprintIcon />
-          </ListItemIcon>
-          <StyledLink
-            to="/dashboard/genomes"
-            activeStyle={{
-              fontWeight: "bold",
-              fontFamily: "Raleway",
-              color: "rgb(251, 140, 0)"
-            }}
-          >
+        <StyledLink
+          to="/dashboard/genomes"
+          activeStyle={{
+            fontWeight: "bold",
+            fontFamily: "Raleway",
+            color: "rgb(251, 140, 0)"
+          }}
+        >
+          <ListItem button>
+            <ListItemIcon>
+              <FingerprintIcon />
+            </ListItemIcon>
             Genomes
-          </StyledLink>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <WorkIcon />
-          </ListItemIcon>
-          <StyledLink
-            to="/dashboard/curation"
-            activeStyle={{
-              fontWeight: "bold",
-              fontFamily: "Raleway",
-              color: "rgb(183, 28, 28)"
-            }}
-          >
+          </ListItem>
+        </StyledLink>
+
+        <StyledLink
+          to="/dashboard/curation"
+          activeStyle={{
+            fontWeight: "bold",
+            fontFamily: "Raleway",
+            color: "rgb(183, 28, 28)"
+          }}
+        >
+          <ListItem button>
+            <ListItemIcon>
+              <WorkIcon />
+            </ListItemIcon>
             Curation
-          </StyledLink>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <DataUsageIcon />
-          </ListItemIcon>
-          <StyledLink
-            to="/dashboard/analytics"
-            activeStyle={{
-              fontWeight: "bold",
-              fontFamily: "Raleway",
-              color: "rgb(30, 136, 229)"
-            }}
-          >
+          </ListItem>
+        </StyledLink>
+        <StyledLink
+          to="/dashboard/analytics"
+          activeStyle={{
+            fontWeight: "bold",
+            fontFamily: "Raleway",
+            color: "rgb(30, 136, 229)"
+          }}
+        >
+          <ListItem button>
+            <ListItemIcon>
+              <DataUsageIcon />
+            </ListItemIcon>
             Analytics
-          </StyledLink>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <TrendingUpIcon />
-          </ListItemIcon>
-          <StyledLink
-            to="/dashboard/dicty-stock-center"
-            activeStyle={{
-              fontWeight: "bold",
-              fontFamily: "Raleway",
-              color: "#4f5aae"
-            }}
-          >
+          </ListItem>
+        </StyledLink>
+
+        <StyledLink
+          to="/dashboard/dicty-stock-center"
+          activeStyle={{
+            fontWeight: "bold",
+            fontFamily: "Raleway",
+            color: "#4f5aae"
+          }}
+        >
+          <ListItem button>
+            <ListItemIcon>
+              <TrendingUpIcon />
+            </ListItemIcon>
             Dicty Stock Center
-          </StyledLink>
-        </ListItem>
+          </ListItem>
+        </StyledLink>
       </ListStyle>
     </Drawer>
   );
