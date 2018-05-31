@@ -3,6 +3,8 @@ import classNames from "classnames"
 import PropTypes from "prop-types"
 import { withStyles } from "@material-ui/core/styles"
 import { legendHeaderStyle } from "../../styles/legendStyles"
+import InfoIcon from "@material-ui/icons/Info"
+import Typography from "@material-ui/core/Typography"
 
 const LegendHeader = props => {
   const { classes, className, children, color, plainCard, ...rest } = props
@@ -16,7 +18,11 @@ const LegendHeader = props => {
   return (
     <div className={cardHeaderClasses} {...rest}>
       <center>
-        <h2>Legend</h2>
+        <InfoIcon style={{ fontSize: 36 }} />
+        <br />
+        <Typography variant="headline" gutterBottom style={{ color: "white" }}>
+          Legend
+        </Typography>
         {children}
       </center>
     </div>

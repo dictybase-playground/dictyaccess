@@ -87,8 +87,8 @@ class Demo extends Component {
         return d
       })
     let myCircos = new Circos({
-      width: 800,
-      height: 800,
+      width: 850,
+      height: 850,
       container: this.circosRef.current,
     })
     myCircos.layout(
@@ -101,8 +101,8 @@ class Demo extends Component {
         },
       ],
       {
-        innerRadius: 350,
-        outerRadius: 370,
+        innerRadius: 300,
+        outerRadius: 330,
         labels: {
           display: true,
         },
@@ -110,8 +110,8 @@ class Demo extends Component {
       },
     )
     myCircos.highlight("cytobands", cytobandsData, {
-      innerRadius: 350,
-      outerRadius: 370,
+      innerRadius: 200,
+      outerRadius: 300,
       opacity: 0.8,
       color: d => {
         return gieStainColor[d.gieStain]
@@ -152,12 +152,37 @@ class Demo extends Component {
 
     return (
       <Grid container spacing={16}>
-        <Grid item xs={4}>
+        <Grid item xs={12}>
           <Dropdown dropDownData={dropDownData} />
+        </Grid>
+
+        <Grid item xs={3}>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <LegendBox>
             <LegendHeader color="info" />
-            <LegendBody>Contents of the legend</LegendBody>
+            <LegendBody>
+              <ul>
+                <li>Legend item 1</li>
+                <li>Legend item 2</li>
+                <li>Legend item 3</li>
+                <li>Legend item 4</li>
+                <li>Legend item 5</li>
+              </ul>
+            </LegendBody>
           </LegendBox>
         </Grid>
         <Grid item xs={8}>
