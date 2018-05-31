@@ -2,13 +2,17 @@ import React, { Component } from "react"
 import Circos from "circos"
 import { withRouter } from "react-router-dom"
 import Grid from "@material-ui/core/Grid"
-import LegendBox from "common/components/LegendBox"
-import ImageHorizontalGrid from "common/components/ImageHorizontalGrid"
-import Dropdown from "common/components/Dropdown"
-import { imageData } from "common/data/circosImageData"
+import LegendBox from "../../../common/components/Legend/LegendBox"
+import LegendHeader from "../../../common/components/Legend/LegendHeader"
+import LegendBody from "../../../common/components/Legend/LegendBody"
+
+import ImageHorizontalGrid from "../../../common/components/ImageHorizontalGrid"
+import Dropdown from "../../../common/components/Dropdown"
+import { imageData } from "../../../common/data/circosImageData"
 // import GRCh37 from "common/data/circos/GRCh37.json"
-import cytobands from "common/data/circos/cytobands.json"
-import segdup from "common/data/circos/segdup.json"
+import cytobands from "../../../common/data/circos/cytobands.json"
+import segdup from "../../../common/data/circos/segdup.json"
+import { withStyles } from "@material-ui/core/styles"
 
 let gieStainColor = {
   gpos100: "rgb(0,0,0)",
@@ -144,12 +148,17 @@ class Demo extends Component {
     history.push(`/dashboard/birdseye/${match.params.dataset}/${component}`)
   }
   render() {
+    const { classes, ...rest } = this.props
+
     return (
       <Grid container spacing={16}>
         <Grid item xs={4}>
           <Dropdown dropDownData={dropDownData} />
           <br />
-          <LegendBox description={description} />
+          <LegendBox>
+            <LegendHeader color="info" />
+            <LegendBody>Contents of the legend</LegendBody>
+          </LegendBox>
         </Grid>
         <Grid item xs={8}>
           <div ref={this.circosRef} />
