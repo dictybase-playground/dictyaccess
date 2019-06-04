@@ -1,3 +1,5 @@
+# This project is no longer maintained. Check out the updated [forked version](https://github.com/dictyBase/dictyaccess) instead.
+
 ## Master branch
 
 [![Build Status](https://travis-ci.org/dictybase-playground/dictyaccess.svg?branch=master)](https://travis-ci.org/dictybase-playground/dictyaccess)
